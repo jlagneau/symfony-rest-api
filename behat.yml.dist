@@ -10,3 +10,14 @@ default:
             kernel:
                 bootstrap: features/bootstrap/bootstrap.php
                 class: App\Kernel
+
+        LeanPHP\Behat\CodeCoverage\Extension:
+            auth: ~
+            drivers:
+                - local
+            filter: ~
+            report:
+                format: clover
+                options:
+                    target: var/behat/clover.xml
+          
