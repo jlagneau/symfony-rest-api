@@ -1,0 +1,19 @@
+language: php
+
+php:
+  - 7.2
+
+branches:
+  only:
+      - master
+      - develop
+
+before_script:
+  - composer self-update
+  - composer install --no-interaction --prefer-source
+
+script:
+  - php vendor/bin/behat
+
+after_script:
+  - php vendor/bin/php-coveralls -v --exclude-no-stmt
