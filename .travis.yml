@@ -16,4 +16,4 @@ script:
   - php vendor/bin/behat
 
 after_script:
-  - php vendor/bin/coveralls -v --exclude-no-stmt
+  - php vendor/bin/php-coveralls -v --exclude-no-stmt
